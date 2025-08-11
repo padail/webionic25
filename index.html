@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- local -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- cdn -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+      }
+      .section {
+        padding: 10px 25px;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        overflow-x: hidden;
+      }
+
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .press-start {
+        font-family: "Press Start 2P", system-ui;
+        font-style: normal;
+      }
+      @keyframes scrollLoop {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-100%);
+        }
+      }
+
+      .scroll-images {
+        animation: scrollLoop 10s linear infinite;
+      }
+
+      @keyframes scrollSpon {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .scroll-spons {
+        animation: scrollSpon 15s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0e061d]">
+    <!-- nav -->
+    <header>
+      <nav
+        class="bg-black section flex justify-between items-center w-full fixed z-[100] top-0"
+      >
+        <img src="./assets/logo.png" class="w-30 md:w-45" alt="" />
+        <!-- Hamburger Icon -->
+        <img
+          src="./assets/humb.png"
+          alt=""
+          class="md:hidden"
+          id="humb"
+          width="20"
+        />
+        <ul
+          class="md:flex text-white md:gap-5 items-center absolute top-13 right-[-400px] md:right-0 md:top-0 bg-black h-[1740px] md:h-full p-5 transform transition-all duration-500 ease-in-out"
+          id="nav-links"
+        >
+          <li class="font-bold px-10 py-5 md:py-0 md:px-5">
+            <a class="" href="#home">Home</a>
+          </li>
+          <li class="font-bold px-10 py-5 md:py-0 md:px-5">
+            <a class="" href="#about">About</a>
+          </li>
+          <li class="font-bold px-10 py-5 md:py-0 md:px-5">
+            <a class="" href="#guidebook">Guidebook</a>
+          </li>
+          <li class="font-bold px-10 py-5 md:py-0 md:px-5">
+            <a class="" href="#timeline">Timeline</a>
+          </li>
+          <li>
+            <a
+              class="p-2 text-center rounded-full bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold py-2 px-6 shadow-lg hover:from-purple-600 hover:to-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+              href=""
+              >Registration</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- hero -->
+    <section
+      id="home"
+      class="h-[740px] bg-[#0e061d] relative flex justify-center items-center pt-5"
+    >
+      <img class="absolute top-40 z-20" src="./assets/hero.png" alt="" />
+      <div class="z-30 absolute top-25 flex w-full justify-center">
+        <!-- CAR1 -->
+        <div class="relative z-20 carousel1">
+          <img
+            id="buttonRight1"
+            src="./assets/buttonRight.png"
+            class="absolute right-[-30px] top-1/2 transform -translate-y-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="60"
+            alt=""
+          />
+          <img
+            id="slider1"
+            src="./assets/slider1.png"
+            class="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="100"
+            alt=""
+          />
+
+          <div>
+            <img
+              src="./assets/mainCarousel.png"
+              class="max-w-[55vw] top-10 hidden md:block"
+              alt=""
+            />
+            <img
+              src="./assets/mHero.png"
+              class="max-w-[75vw] top-10 md:hidden"
+              alt=""
+            />
+            <div
+              class="absolute top-0 w-full py-3 px-10 text-center flex flex-col justify-around items-center h-full"
+            >
+              <h3
+                class="font-bold text-white text-[22px] md:text-[32px] text-center"
+              >
+                Internet Of Things
+              </h3>
+              <p class="text-white text-sm text-center md:text-[16px]">
+                Menggali potensi teknologi Internet of Things untuk merancang
+                sistem cerdas yang terintegrasi, efisien, dan responsif terhadap
+                kebutuhan industri modern. Setiap rancangan dituangkan dalam
+                proposal berbasis riset mendalam, memadukan sensor pintar,
+                analitik data real-time, serta integrasi cloud untuk
+                menghasilkan solusi yang tidak hanya adaptif, tetapi juga
+                scalable dan berorientasi masa depan.
+              </p>
+              <a
+                href="#guidebook"
+                class="shadow-indigo-500/50 font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- CAR2 -->
+        <div class="absolute z-20 carousel2 hidden">
+          <img
+            id="buttonRight2"
+            src="./assets/buttonRight.png"
+            class="absolute right-[-30px] top-1/2 transform -translate-y-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="60"
+            alt=""
+          />
+          <img
+            id="buttonLeft1"
+            src="./assets/buttonLeft.png"
+            class="absolute left-[-30px] top-1/2 transform -translate-y-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="60"
+            alt=""
+          />
+          <img
+            id="slider2"
+            src="./assets/slider2.png"
+            class="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="100"
+            alt=""
+          />
+          <div>
+            <img
+              src="./assets/mainCarousel.png"
+              class="max-w-[55vw] absolute z-[-10] md:block hidden"
+              alt=""
+            />
+            <img
+              src="./assets/carousel2.png"
+              class="max-w-[55vw] z-100 md:block hidden"
+              alt=""
+            />
+            <img
+              src="./assets/mcarousel2.png"
+              class="max-w-[75vw] top-10 md:hidden"
+              alt=""
+            />
+            <div
+              class="absolute top-0 w-full py-3 px-10 text-center flex flex-col justify-around items-center h-full"
+            >
+              <h3
+                class="font-bold text-white text-[22px] md:text-[32px] text-center"
+              >
+                Networking
+              </h3>
+              <p class="text-white text-sm text-center md:text-[16px]">
+                Menitikberatkan pada desain dan optimasi arsitektur jaringan
+                tingkat lanjut berbasis teknologi Cisco, dengan penekanan pada
+                efisiensi routing, keamanan infrastruktur, dan high
+                availability. Skenario yang dihadirkan menuntut penerapan
+                protokol kompleks, troubleshooting presisi, serta pengelolaan
+                trafik yang adaptif terhadap beban dan dinamika komunikasi data
+                industri berskala besar.
+              </p>
+              <a
+                href="#guidebook"
+                class="shadow-yellow-500/50 font-semibold px-8 py-3 text-white bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- CAR3 -->
+        <div class="absolute z-20 carousel3 hidden">
+          <img
+            id="buttonLeft2"
+            src="./assets/buttonLeft.png"
+            class="absolute left-[-30px] top-1/2 transform -translate-y-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="60"
+            alt=""
+          />
+          <img
+            id="slider3"
+            src="./assets/slider3.png"
+            class="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+            width="100"
+            alt=""
+          />
+          <div>
+            <img
+              src="./assets/mainCarousel.png"
+              class="max-w-[55vw] absolute z-[-10] md:block hidden"
+              alt=""
+            />
+            <img
+              src="./assets/carousel3.png"
+              class="max-w-[55vw] z-100 md:block hidden"
+              alt=""
+            />
+            <img
+              src="./assets/mcarousel3.png"
+              class="max-w-[75vw] top-10 md:hidden"
+              alt=""
+            />
+            <div
+              class="absolute top-0 w-full py-3 px-10 text-center flex flex-col justify-around items-center h-full"
+            >
+              <h3
+                class="font-bold text-white text-[22px] md:text-[32px] text-center"
+              >
+                Cyber Security
+              </h3>
+              <p class="text-white text-sm text-center md:text-[16px]">
+                Memasuki ranah pertahanan dan serangan siber melalui dua skema
+                strategis: CTF Jeopardy, yang menguji kecepatan berpikir dalam
+                mengurai enkripsi, eksploitasi kerentanan, dan analisis forensik
+                digital, serta CTF Attack-Defense, yang menghadirkan simulasi
+                peperangan siber real-time, di mana stabilitas sistem dan
+                kreativitas serangan menjadi kunci dominasi di medan tempur
+                digital.
+              </p>
+              <a
+                href="#guidebook"
+                class="shadow-indigo-500/50 font-semibold px-8 py-3 text-white bg-gradient-to-r from-yellow-400 via-green-400 to-blue-500 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section
+      class="bg-[#0e061d] w-full h-full flex flex-col justify-start items-center mt-[-10px] md:pb-[150px] md:overflow-x-hidden"
+      id="about"
+    >
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="press-start text-white text-[25px] md:text-[40px] relative z-[40] pt-20 md:pt-10"
+      >
+        ABOUT
+      </h3>
+      <div class="flex items-end">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          class="relative z-[30] w-full ml-[-20px] md:ml-0 md:w-[700px] md:mr-[7rem]"
+        >
+          <img src="./assets/about.png" alt="" class="md:block hidden" />
+          <img src="./assets/mabout.png" alt="" class="md:hidden" />
+          <div class="absolute top-32 left-20 md:top-40 md:left-30 text-white">
+            <div
+              class="flex gap-4 font-bold text-lg md:text-[30px] items-center"
+            >
+              <span class="block">WHAT IS </span>
+              <span class="press-start text-[25px] md:text-[40px]">IONIC?</span>
+            </div>
+            <div class="text-justify pr-[40px] mt-4 md:mt-0">
+              <p class="md:text-[16px] text-sm">
+                 IONIC merupakan kompetisi berskala nasional yang diselenggarakan oleh Program Studi 
+                Teknologi Rekayasa Internet, Politeknik Elektronika Negeri Surabaya (PENS). Kompetisi 
+                ini dirancang untuk mengasah kemampuan siswa sma/k sederajat di bidang Internet Of Things (IoT),
+                jaringan komputer(Networking), dan keamanan siber (Cybersecurity).
+                <br>
+                Melaui tantangan nyata dan kolaborasi intensif, IONIC menghandirkan wadah bagi generasi muda Indonesia
+                untuk menunjukkan inovasi, keterampilan teknis, serta kemampuan problem-solving di era digital.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- desktop -->
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          class="relative z-[30] w-[400px] hidden md:block"
+        >
+          <img src="./assets/frameAbout.png" width="50%" alt="" />
+          <div class="absolute h-[370px] top-5 left-2">
+            <div class="relative overflow-hidden h-full">
+              <div class="scroll-images">
+                <!-- items1 -->
+                <div class="relative">
+                  <img src="./assets/autoscroll.png" class="pt-7" alt="" />
+                  <div class="text-white absolute top-10 left-5">
+                    <h2 class="font-bold text-[27px]">Hallo</h2>
+                    <p>
+                      ini nnti buat pencapaian kita, bisa kasih angka di title
+                      ya, autoscroll
+                    </p>
+                  </div>
+                </div>
+                <!-- items2 -->
+                <div class="relative">
+                  <img src="./assets/autoscroll.png" class="pt-7" alt="" />
+                  <div class="text-white absolute top-10 left-5">
+                    <h2 class="font-bold text-[27px]">Hallo</h2>
+                    <p>
+                      ini nnti buat pencapaian kita, bisa kasih angka di title
+                      ya, autoscroll
+                    </p>
+                  </div>
+                </div>
+                <!-- items2 -->
+                <div class="relative">
+                  <img src="./assets/autoscroll.png" class="pt-7" alt="" />
+                  <div class="text-white absolute top-10 left-5">
+                    <h2 class="font-bold text-[27px]">Hallo</h2>
+                    <p>
+                      ini nnti buat pencapaian kita, bisa kasih angka di title
+                      ya, autoscroll
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="./assets/holo-star.png"
+            class="absolute bottom-0 right-0 z-[-1]"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- mobile -->
+      <div
+        class="relative z-[30] mt-10 w-full flex justify-center md:hidden pb-[70px]"
+      >
+        <img src="./assets/mframeAbout.png" width="90%" alt="" />
+        <div class="absolute w-[330px] h-[85px] top-3 left-7">
+          <div class="relative overflow-hidden h-full">
+            <div class="scroll-spons flex gap-5 absolute left-0 animate-scroll">
+              <!-- items1 -->
+              <div class="relative w-[85px]">
+                <img src="./assets/mautoscroll.png" class="h-22" alt="" />
+                <div class="text-white absolute top-3 left-3">
+                  <h2 class="font-bold text-[14px]">Hallo</h2>
+                  <p class="text-[6px]">
+                    ini nanti buat pencapaian kita, bisa kasih angka di title
+                    ya, autoscroll
+                  </p>
+                </div>
+              </div>
+              <div class="relative w-[85px]">
+                <img src="./assets/mautoscroll.png" class="h-22" alt="" />
+                <div class="text-white absolute top-3 left-3">
+                  <h2 class="font-bold text-[14px]">Hallo</h2>
+                  <p class="text-[6px]">
+                    ini nanti buat pencapaian kita, bisa kasih angka di title
+                    ya, autoscroll
+                  </p>
+                </div>
+              </div>
+              <div class="relative w-[85px]">
+                <img src="./assets/mautoscroll.png" class="h-22" alt="" />
+                <div class="text-white absolute top-3 left-3">
+                  <h2 class="font-bold text-[14px]">Hallo</h2>
+                  <p class="text-[6px]">
+                    ini nanti buat pencapaian kita, bisa kasih angka di title
+                    ya, autoscroll
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/holo-star.png"
+          width="100"
+          class="absolute bottom-0 right-0 z-[-10]"
+          alt=""
+        />
+      </div>
+    </section>
+    <!-- SPONSOR -->
+    <section
+      class="bg-[#0e061d] h-[80px] border-y-1 border-white flex w-full justify-center"
+    >
+      <div class="flex w-[1400px]">
+        <div
+          class="border-r-2 border-white md:w-25 w-10 h-full rounded-xl md:rounded-full"
+        ></div>
+        <div
+          class="border-x-2 border-white w-full h-full rounded-full flex items-center px-10 gap-5"
+        >
+          <p class="text-white w-[15%] md:text-[16px] hidden md:block">
+            Supported by :
+          </p>
+          <div class="relative h-full w-full overflow-hidden">
+            <div
+              class="absolute top-0 flex scroll-spons items-center h-full gap-10"
+            >
+              <img src="./assets/cisco.png" width="100" alt="" />
+              <img src="./assets/aws.png"width="100" alt="" />
+              <img src="./assets/tim.png" width="100" alt=""/>
+              <img src="./assets/cisco.png" width="100" alt="" />
+              <img src="./assets/aws.png"width="100" alt="" />
+              <img src="./assets/tim.png" width="100" alt=""/>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-l-2 border-white md:w-25 w-10 h-full rounded-xl md:rounded-full"
+        ></div>
+      </div>
+    </section>
+    <!-- COMPETITION -->
+    <section class="bg-[#0e061d] md:pt-[100px]">
+      <div class="relative flex justify-center h-[720px] md:h-auto">
+        <img src="./assets/nyoba.jpg" alt="" height="100%" class="" />
+        <div
+          class="absolute top-30 md:top-30 w-full flex flex-col items-center"
+          id="guidebook"
+        >
+          <h3
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="press-start text-white text-[25px] md:text-[40px] text-center"
+          >
+            COMPETITION
+          </h3>
+          <!-- desktop -->
+          <div class="hidden md:flex justify-around items-center mt-10 w-full">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="relative w-[300px] flex justify-center hover:scale-105 transform transition-all duration-300 ease-in-out"
+            >
+              <img src="./assets/frameCom.png" alt="" />
+              <div
+                class="absolute top-10 flex justify-center flex-col items-center"
+              >
+                <h3 class="font-bold text-[20px] text-white">
+                  Internet of Things
+                </h3>
+                <img src="./assets/iotCom.png" alt="" class="my-5" />
+                <button
+                  class="shadow-indigo-500/50 cursor-pointer font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+                >
+                  Join Now
+                </button>
+              </div>
+            </div>
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              class="relative w-[300px] flex justify-center hover:scale-105 transform transition-all duration-300 ease-in-out"
+            >
+              <img src="./assets/frameCom.png" alt="" />
+              <div
+                class="absolute top-10 flex justify-center flex-col items-center"
+              >
+                <h3 class="font-bold text-[20px] text-white">Networking</h3>
+                <img src="./assets/netCom.png" alt="" class="my-5" />
+                <button
+                  class="shadow-indigo-500/50 cursor-pointer font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+                >
+                  Join Now
+                </button>
+              </div>
+            </div>
+            <div
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              class="relative w-[300px] flex justify-center hover:scale-105 transform transition-all duration-300 ease-in-out"
+            >
+              <img src="./assets/frameCom.png" alt="" />
+              <div
+                class="absolute top-10 flex justify-center flex-col items-center"
+              >
+                <h3 class="font-bold text-[20px] text-white">Cyber Security</h3>
+                <img src="./assets/csCom.png" alt="" class="my-5" />
+                <button
+                  class="shadow-indigo-500/50 cursor-pointer font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+                >
+                  Join Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- MOBILE -->
+          <div class="w-full md:hidden h-[700px] relative overflow-x-scroll">
+            <div
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              class="absolute top-0 left-10 flex gap-10 items-center mt-10 w-[1000px]"
+            >
+              <div
+                class="relative w-[300px] flex justify-center hover:scale-105 transform transition-all duration-300 ease-in-out"
+              >
+                <img src="./assets/frameCom.png" alt="" />
+                <div
+                  class="absolute top-10 flex justify-center flex-col items-center"
+                >
+                  <h3 class="font-bold text-[20px] text-white">
+                    Internet of Things
+                  </h3>
+                  <img src="./assets/iotCom.png" alt="" class="my-5" />
+                  <button
+                    class="shadow-indigo-500/50 cursor-pointer font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+                  >
+                    Join Now
+                  </button>
+                </div>
+              </div>
+              <div
+                class="relative w-[300px] flex justify-center hover:scale-105 transform transition-all duration-300 ease-in-out"
+              >
+                <img src="./assets/frameCom.png" alt="" />
+                <div
+                  class="absolute top-10 flex justify-center flex-col items-center"
+                >
+                  <h3 class="font-bold text-[20px] text-white">Networking</h3>
+                  <img src="./assets/netCom.png" alt="" class="my-5" />
+                  <button
+                    class="shadow-indigo-500/50 cursor-pointer font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+                  >
+                    Join Now
+                  </button>
+                </div>
+              </div>
+              <div
+                class="relative w-[300px] flex justify-center hover:scale-105 transform transition-all duration-300 ease-in-out"
+              >
+                <img src="./assets/frameCom.png" alt="" />
+                <div
+                  class="absolute top-10 flex justify-center flex-col items-center"
+                >
+                  <h3 class="font-bold text-[20px] text-white">
+                    Cyber Security
+                  </h3>
+                  <img src="./assets/csCom.png" alt="" class="my-5" />
+                  <button
+                    class="shadow-indigo-500/50 cursor-pointer font-semibold px-8 py-3 text-white bg-gradient-to-r from-teal-400 via-indigo-500 to-purple-600 rounded-full shadow-lg hover:scale-105 transform transition-all duration-300 ease-in-out"
+                  >
+                    Join Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section
+      class="bg-[url('./assets/bg.png')] h-full bg-cover bg-center flex pt-[100px] md:pt-0 relative z-20 justify-center flex-col items-center mb-[-20px]"
+    >
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="press-start text-white md:text-[40px] text-[25px]"
+      >
+        OUR TIMELINE
+      </h3>
+      <div
+        class="relative w-full overflow-x-auto hide-scrollbar md:flex flex-col items-center"
+      >
+        <div id="timeline" class="relative md:w-[1250px] w-[1250px]">
+          <img src="./assets/frameTimeline.png" alt="" />
+          <img
+            src="./assets/line.png"
+            class="absolute top-60 left-50"
+            alt=""
+            width="70%"
+          />
+          <img
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            src="./assets/Timeline1.png"
+            class="absolute top-40 left-20"
+            width="200"
+            alt=""
+          />
+          <img
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            src="./assets/Timeline2.png"
+            class="absolute top-65 left-70"
+            width="200"
+            alt=""
+          />
+          <img
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            src="./assets/Timeline3.png"
+            class="absolute top-40 right-130"
+            width="200"
+            alt=""
+          />
+          <img
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            src="./assets/Timeline4.png"
+            class="absolute top-65 right-70"
+            width="200"
+            alt=""
+          />
+          <img
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            src="./assets/Timeline5.png"
+            class="absolute top-40 md:right-20 right-20"
+            width="200"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- LOOKBACK -->
+    <section
+      class="bg-[url('./assets/bg2.png')] h-full bg-cover bg-center flex py-[100px] flex-col items-center justify-start"
+    >
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="press-start text-white md:text-[40px] text-[25px]"
+      >
+        LOOKBACK IONIC
+      </h3>
+      <div
+        class="relative md:w-[96%] max-w-[1200px] w-full ml-[-35px] md:ml-0 flex items-center justify-center md:overflow-hidden"
+      >
+        <img src="./assets/frameLookback.png" alt="" class="hidden md:block" />
+        <img src="./assets/mframeLookback.png" alt="" class="md:hidden" />
+        <div
+          class="md:w-[80%] w-[350px] absolute top-20 --right-1 --md:right-20 md:p-0 p-[20px] ml-10"
+        >
+          <div
+            class="relative w-full md:max-h-[370px] h-[490px] overflow-y-scroll hide-scrollbar"
+          >
+            <div
+              class="flex flex-col md:flex-row items-center justify-center gap-15 mt-15"
+            >
+              <img src="./assets/iotCom.png" alt="" />
+              <div class="text-white">
+                <h3
+                  class="press-start text-[30px] md:flex justify-between items-end mb-8"
+                >
+                  IONIC 2024
+                  <span class="font-semibold text-[20px]">3 Agus 2025</span>
+                </h3>
+                <p class="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vivamus vitae nibh enim. Aenean tellus turpis, porta ut mauris
+                  a, maximus vulputate ante. Aenean at porta odio, eu
+                  condimentum lectus. Vestibulum ante ipsum primis in faucibus
+                  orci luctus et ultrices posuere cubilia curae; Suspendisse
+                  nunc felis, pellentesque id lorem eu, iaculis interdum leo.
+                  Duis dolor purus, vehicula id sollicitudin in, ultricies non
+                  ex. Ut venenatis, nibh sollicitudin hendrerit finibus, dolor
+                  risus vehicula magna, sed mollis libero sem in justo. Aenean
+                  porttitor orci sed condimentum tincidunt.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col md:flex-row items-center justify-center gap-15 mt-15"
+            >
+              <img src="./assets/iotCom.png" alt="" />
+              <div class="text-white">
+                <h3
+                  class="press-start text-[30px] md:flex justify-between items-end mb-8"
+                >
+                  IONIC 2024
+                  <span class="font-semibold text-[20px]">3 Agus 2025</span>
+                </h3>
+                <p class="text-justify">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vivamus vitae nibh enim. Aenean tellus turpis, porta ut mauris
+                  a, maximus vulputate ante. Aenean at porta odio, eu
+                  condimentum lectus. Vestibulum ante ipsum primis in faucibus
+                  orci luctus et ultrices posuere cubilia curae; Suspendisse
+                  nunc felis, pellentesque id lorem eu, iaculis interdum leo.
+                  Duis dolor purus, vehicula id sollicitudin in, ultricies non
+                  ex. Ut venenatis, nibh sollicitudin hendrerit finibus, dolor
+                  risus vehicula magna, sed mollis libero sem in justo. Aenean
+                  porttitor orci sed condimentum tincidunt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-black text-neutral-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+          <!-- Col 1 -->
+          <div class="flex flex-col h-full">
+            <div class="flex items-stretch gap-3">
+              <div>
+                <div class="text-xl font-semibold tracking-wide text-white">
+                  <img src="./assets/logo.png" width="50%" alt="" />
+                </div>
+                <p class="mt-4 text-sm leading-relaxed">
+                  If you have any questions regarding the competition, feel free
+                  to reach out to our contact person.
+                </p>
+                <p class="mt-4 text-sm leading-relaxed">
+                  Politeknik Elektronika Surabaya, Jl. Raya ITS, Keputih,
+                  Sukolilo, Surabaya, East Java 60111
+                </p>
+              </div>
+            </div>
+            <div class="mt-auto pt-6 h-px w-full border-b-1"></div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="flex flex-col h-full">
+            <h3 class="text-white font-semibold text-lg">Social Media</h3>
+            <ul class="mt-4 space-y-3 text-sm md:text-base text-neutral-300">
+              <!-- IG -->
+              <li>
+                <a
+                  href="https://instagram.com/ionicomp.pens"
+                  class="group flex items-center gap-3"
+                >
+                  <span
+                    class="inline-flex w-9 h-9 items-center justify-center rounded-md border border-neutral-700"
+                  >
+                    <!-- Instagram icon -->
+                    <svg viewBox="0 0 24 24" class="w-5 h-5">
+                      <path
+                        fill="currentColor"
+                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 4.5a4.5 4.5 0 1 1 0 9a4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5zm5.25-2.75a.75.75 0 1 1 0 1.5a.75.75 0 0 1 0-1.5z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="group-hover:text-white">ionicomp.pens</span>
+                </a>
+              </li>
+
+              <!-- LinkedIn -->
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ionicpens/"
+                  class="group flex items-center gap-3"
+                >
+                  <span
+                    class="inline-flex w-9 h-9 items-center justify-center rounded-md border border-neutral-700"
+                  >
+                    <!-- LinkedIn icon -->
+                    <svg viewBox="0 0 24 24" class="w-5 h-5">
+                      <path
+                        fill="currentColor"
+                        d="M6.94 6.5A1.94 1.94 0 1 1 3.06 6.5a1.94 1.94 0 0 1 3.88 0zM4 9h4v11H4zM14.5 9c3.04 0 5.5 2.21 5.5 5.89V20h-4v-4.36c0-1.54-.55-2.6-1.93-2.6c-1.05 0-1.67.71-1.94 1.4c-.1.24-.13.58-.13.92V20H8v-11h3.8v1.66C12.33 9.9 13.27 9 14.5 9z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="group-hover:text-white">ionic pens</span>
+                </a>
+              </li>
+
+              <!-- Email -->
+              <li>
+                <a
+                  href="mailto:ionic.tripens@gmail.com"
+                  class="group flex items-center gap-3"
+                >
+                  <span
+                    class="inline-flex w-9 h-9 items-center justify-center rounded-md border border-neutral-700"
+                  >
+                    <!-- Mail icon -->
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="group-hover:text-white"
+                    >ionic.tripens@gmail.com</span
+                  >
+                </a>
+              </li>
+            </ul>
+            <div class="mt-auto pt-6 h-px w-full border-b-1"></div>
+          </div>
+
+          <!-- Contact Person -->
+          <div class="flex flex-col h-full">
+            <h3 class="text-white font-semibold text-lg">Contact Person</h3>
+            <ul class="mt-4 space-y-4 text-sm md:text-base text-neutral-300">
+              <li class="flex items-center gap-3">
+                <span
+                  class="inline-flex w-9 h-9 items-center justify-center rounded-md border border-neutral-700"
+                >
+                  <!-- Phone icon -->
+                  <svg viewBox="0 0 24 24" class="w-5 h-5">
+                    <path
+                      fill="currentColor"
+                      d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a2 2 0 0 1-2 2C9.6 22 2 14.4 2 4a2 2 0 0 1 2-2h3.49a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.02z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><span class="font-medium text-white">Contact Person (Iqbal)</span> :
+                  0896-1525-4818</span
+                >
+              </li>
+
+              <li class="flex items-center gap-3">
+                <span
+                  class="inline-flex w-9 h-9 items-center justify-center rounded-md border border-neutral-700"
+                >
+                  <!-- Phone icon -->
+                  <svg viewBox="0 0 24 24" class="w-5 h-5">
+                    <path
+                      fill="currentColor"
+                      d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a2 2 0 0 1-2 2C9.6 22 2 14.4 2 4a2 2 0 0 1 2-2h3.49a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.02z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  ><span class="font-medium text-white">Contact Person (OSA)</span> :
+                  0857-0434-9996</span
+                >
+              </li>
+            </ul>
+            <div class="mt-auto pt-6 h-px w-full border-b-1"></div>
+          </div>
+        </div>
+
+        <!-- Bottom bar (optional) -->
+        <div class="pt-6 md:pt-10 text-xs text-neutral-500 text-center">
+          © <span id="y"></span> IONIC. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
