@@ -48,6 +48,26 @@ buttonLeft2.addEventListener("click", () => {
   car2.classList.remove("hidden");
 });
 
+// scroll
+// Menambahkan gambar yang sama lagi untuk membuat efek infinite scroll
+const scrollContainer1 = document.querySelector(".scroll-images");
+const images1 = document.querySelectorAll(".scroll-images .relative");
+
+// Menyalin gambar yang ada dan menambahkannya ke dalam container
+images1.forEach((img1) => {
+  const clone1 = img1.cloneNode(true);
+  scrollContainer1.appendChild(clone1);
+});
+
+const scrollContainer = document.querySelector(".scroll-spons");
+const images = document.querySelectorAll(".scroll-spons .relative");
+
+// Menyalin gambar yang ada dan menambahkannya ke dalam container
+images.forEach((img) => {
+  const clone = img.cloneNode(true);
+  scrollContainer.appendChild(clone);
+});
+
 // AOS
 function addAOSAttributes() {
   const sections = document.querySelectorAll(".anim-section");

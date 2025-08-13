@@ -1,7 +1,10 @@
+
 <!DOCTYPE html>
 <html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="c_tHqEhaG2dWz4xdfGRVlKfEZGTdfOFlWwRgCsSq9hI" />
+    <title>IONIC - IoT & Networking Competition</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link href="./output.css" rel="stylesheet" /> -->
     <!-- local -->
@@ -44,17 +47,18 @@
           transform: translateY(0);
         }
         100% {
-          transform: translateY(-100%);
+          transform: translateY(-50%);
         }
       }
 
       .scroll-images {
-        animation: scrollLoop 10s linear infinite;
+        will-change: transform;
+        animation: scrollLoop 15s linear infinite;
       }
 
       @keyframes scrollSpon {
         0% {
-          transform: translateX(0);
+          transform: translateX(20%);
         }
         100% {
           transform: translateX(-100%);
@@ -62,7 +66,8 @@
       }
 
       .scroll-spons {
-        animation: scrollSpon 15s linear infinite;
+        will-change: transform;
+        animation: scrollSpon 10s linear infinite;
       }
     </style>
   </head>
@@ -353,10 +358,9 @@
                 <div class="relative">
                   <img src="./assets/autoscroll.png" class="pt-7" alt="" />
                   <div class="text-white absolute top-10 left-5">
-                    <h2 class="font-bold text-[27px]">Hallo</h2>
+                    <h2 class="font-bold text-[27px]">+200</h2>
                     <p>
-                      ini nnti buat pencapaian kita, bisa kasih angka di title
-                      ya, autoscroll
+                      Orang Mengikuti Kompetisi Ini Setiap Tahunnya.
                     </p>
                   </div>
                 </div>
@@ -364,27 +368,25 @@
                 <div class="relative">
                   <img src="./assets/autoscroll.png" class="pt-7" alt="" />
                   <div class="text-white absolute top-10 left-5">
-                    <h2 class="font-bold text-[27px]">Hallo</h2>
+                    <h2 class="font-bold text-[27px]">+40</h2>
                     <p>
-                      ini nnti buat pencapaian kita, bisa kasih angka di title
-                      ya, autoscroll
+                      Panitia Yang Menghandle Acara Ini Setiap Tahunnya.
                     </p>
                   </div>
                 </div>
-                <!-- items2 -->
+                <!-- items3 -->
                 <div class="relative">
                   <img src="./assets/autoscroll.png" class="pt-7" alt="" />
                   <div class="text-white absolute top-10 left-5">
-                    <h2 class="font-bold text-[27px]">Hallo</h2>
+                    <h2 class="font-bold text-[27px]">3</h2>
                     <p>
-                      ini nnti buat pencapaian kita, bisa kasih angka di title
-                      ya, autoscroll
+                     Perusahaan Besar Mendukung Acara Ini Terlaksana.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div>  
           <img
             src="./assets/holo-star.png"
             class="absolute bottom-0 right-0 z-[-1]"
@@ -398,38 +400,35 @@
       >
         <img src="./assets/mframeAbout.png" width="90%" alt="" />
         <div class="absolute w-[83%] h-[50%]">
-          <div class="relative overflow-hidden h-full">
-            <div class="scroll-spons flex gap-5 absolute left-0">
+          <div class="relative h-full overflow-hidden">
+            <div class="flex gap-10 h-full absolute scroll-spons right-50">
               <!-- items1 -->
-              <div class="relative p-1">
+              <div class="flex-shrink-0 h-full relative p-1">
                 <img src="./assets/mautoscroll.png" class="h-[100%]" alt="" />
                 <div class="text-white absolute top-3 left-3 pr-3">
-                  <h2 class="font-bold text-[14px]">Hallo</h2>
+                  <h2 class="font-bold text-[14px]">+200</h2>
                   <p class="text-[6px]">
-                    ini nanti buat pencapaian kita, bisa kasih angka di title
-                    ya, autoscroll
+                    Orang Mengikuti Kompetisi Ini Setiap Tahunnya.
                   </p>
                 </div>
               </div>
-              <!-- items1 -->
-              <div class="relative p-1">
+              <!-- items2 -->
+              <div class="flex-shrink-0 h-full relative p-1">
                 <img src="./assets/mautoscroll.png" class="h-[100%]" alt="" />
                 <div class="text-white absolute top-3 left-3 pr-3">
-                  <h2 class="font-bold text-[14px]">Hallo</h2>
+                  <h2 class="font-bold text-[14px]">+40</h2>
                   <p class="text-[6px]">
-                    ini nanti buat pencapaian kita, bisa kasih angka di title
-                    ya, autoscroll
+                    Panitia Yang Menghandle Acara Ini Setiap Tahunnya.
                   </p>
                 </div>
               </div>
-              <!-- items1 -->
-              <div class="relative p-1">
+              <!-- items3 -->
+              <div class="flex-shrink-0 h-full relative p-1">
                 <img src="./assets/mautoscroll.png" class="h-[100%]" alt="" />
                 <div class="text-white absolute top-3 left-3 pr-3">
-                  <h2 class="font-bold text-[14px]">Hallo</h2>
+                  <h2 class="font-bold text-[14px]">3</h2>
                   <p class="text-[6px]">
-                    ini nanti buat pencapaian kita, bisa kasih angka di title
-                    ya, autoscroll
+                    Perusahaan Besar Mendukung Acara Ini Terlaksana.
                   </p>
                 </div>
               </div>
@@ -462,9 +461,9 @@
             <div
               class="absolute top-0 flex scroll-spons items-center h-full gap-10"
             >
-              <img src="./assets/cisco.png" width="100" alt="" />
-              <img src="./assets/aws.png" width="100" alt="" />
-              <img src="./assets/tim.png" width="100" alt="" />
+              <img src="./assets/cisco.png" width="100" alt="" class="md:hidden"  />
+              <img src="./assets/aws.png" width="100" alt="" class="md:hidden" />
+              <img src="./assets/tim.png" width="100" alt="" class="md:hidden" />
               <img src="./assets/cisco.png" width="100" alt="" />
               <img src="./assets/aws.png" width="100" alt="" />
               <img src="./assets/tim.png" width="100" alt="" />
@@ -922,3 +921,13 @@
     <script src="./src/main.js"></script>
   </body>
 </html>
+
+<!-- 
+UI/UX Designer: Almira Darmawan
+Developers: Muh Fadhail Akmal Kamal
+Administrator: Eko Wahyudi
+Penyedia: Unit Pelayanan Terpadu Komputer PENS (UPT Komputer)
+
+All Credits By Prodi Teknologi Rekayasa Internet PENS
+
+-->
